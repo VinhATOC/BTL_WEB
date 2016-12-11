@@ -30,7 +30,7 @@
       </div>
     </div>
 
-    <div class="tab-pane" id="tab1FollowUs">
+    <div class="tab-pane" id="tab1FollowUs" style="height: 549px;">
       <div class="row">
           <div class="col-md-12">
       <div class="grid simple">
@@ -69,7 +69,7 @@
                 <div class="col-md-12">
                   <label class="semi-bold">Thuộc bộ môn</label>
                   <p id="department_id_error" class="text-error"></p>
-                  <select name="department_id" class="form-group">
+                  <select name="department_id" class="form-group" style="width: 100%;">
                     <option class="first_select" value="">Chọn</option>
                     @foreach($departments as $item)
                         <option value="{{$item['id']}}">{{$item['name']}}</option>
@@ -80,7 +80,7 @@
                 <div class="col-md-12">
                   <label class="semi-bold">Chức vụ trong khoa</label>
                   <p id="chucvu_error" class="text-error"></p>
-                  <select name="chucvu" class="form-group">
+                  <select name="chucvu" class="form-group" style="width: 100%;">
                     <option class="first_select" value="">Chọn</option>
                     <option value="giang-vien">Giảng viên</option>
                     <option value="pho-khoa">Phó khoa</option>
