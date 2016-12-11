@@ -73,7 +73,8 @@
     }
     
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
+    .row.content {height: 450px
+        background-color#ffffff;}
     
     /* Set gray background color and 100% height */
     .sidenav {
@@ -90,13 +91,7 @@
     }
     
     /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height:auto;} 
-    }
+  
   </style>
 
 </head>

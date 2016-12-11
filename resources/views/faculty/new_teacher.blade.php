@@ -4,7 +4,7 @@
 @endsection
 @section('main')
   <ul class="nav nav-tabs" id="tab-01">
-    <li class="active"><a href="#tab1hellowWorld">Thêm bằng excel</a></li>
+    <li class="active"><a href="#tab1hellowWorld">Chọn file excel </a></li>
     <li><a href="#tab1FollowUs">Thêm thủ công</a></li>
   </ul>
   <div class="tools"> <a href="javascript:;" class="collapse"></a> <a href="#grid-config" data-toggle="modal" class="config"></a> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
@@ -32,14 +32,18 @@
 
     <div class="tab-pane" id="tab1FollowUs">
       <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
       <div class="grid simple">
         <div class="grid-title no-border">
           <h4><span  class="semi-bold">Thêm giảng viên</span></h4>
-          <div class="tools"> <a href="javascript:;" class="collapse"></a> <a href="#grid-config" data-toggle="modal" class="config"></a> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
+          <div class="tools"> <a href="javascript:;" class="remove"></a> </div>
         </div>
+
         <div class="grid-body">
-            <div class="form-group">
+                      <div class="row">
+          <div class="col-md-6">
+              <div class="form-group">
+
               <label class="semi-bold">Họ và tên</label>
               <p id="name_error" class="text-error"></p>
               <input type="text" id="name" class="form-control" placeholder="Họ và tên">
@@ -54,13 +58,15 @@
               <p id="degree_error" class="text-error"></p>
               <input type="text" id="degree" class="form-control" placeholder="Học vị">
             </div>
+            </div>
+            <div class="col-md-6">
             <div class="form-group">
               <label class="semi-bold">Vnu email</label>
               <p id="vnu_email_error" class="text-error"></p>
               <input type="text" id="vnu_email" class="form-control" placeholder="Vnu email">
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                   <label class="semi-bold">Thuộc bộ môn</label>
                   <p id="department_id_error" class="text-error"></p>
                   <select name="department_id" class="form-group">
@@ -71,7 +77,7 @@
                   </select>
                 </div>
                 
-                <div class="col-md-6">
+                <div class="col-md-12">
                   <label class="semi-bold">Chức vụ trong khoa</label>
                   <p id="chucvu_error" class="text-error"></p>
                   <select name="chucvu" class="form-group">
@@ -81,8 +87,11 @@
                     <option value="truong-khoa">Trưởng khoa</option>
                   </select>
                 </div>
+                </div>
+                </div>
             </div>
-            <div id="new_teacher_form"><button id="start_new_teacher_form" type="button" class="btn btn-primary">Thêm giảng viên</button> <button id="reset_form" type="button" class="btn btn-danger">Nhập lại</button></div>
+            <div id="new_teacher_form"><button id="start_new_teacher_form" type="button" class="btn btn-primary">Xong</button> 
+            <button id="reset_form" type="button" class="btn btn-primary" >Nhập lại</button></div>
         </div>
       </div>
     </div>
