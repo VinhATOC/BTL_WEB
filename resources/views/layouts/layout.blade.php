@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
     <meta charset="utf-8"/>
-    <title>Webarch - Responsive Admin Dashboard</title>
+    <title>Faculty</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta content="" name="description"/>
     <meta content="" name="author"/>
@@ -59,6 +59,46 @@
 <link href="/webarch/webarch/HTML/assets/plugins/jquery-nestable/jquery.nestable.css" rel="stylesheet" type="text/css" media="screen"/>
 <!-- END PLUGIN GROUP_LIST CSS -->
 
+<style>
+
+    .list_{
+        list-style-type: none;
+        margin-top: 5px;
+    }
+
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -67,57 +107,22 @@
 <div class="header navbar navbar-inverse ">
     <!-- BEGIN TOP NAVIGATION BAR -->
     <div class="navbar-inner">
-        <div class="header-seperation">
-            <ul class="nav pull-left notifcation-center" id="main-menu-toggle-wrapper" style="display:none">
-                <li class="dropdown"><a id="main-menu-toggle" href="#main-menu" class="">
-                        <div class="iconset top-menu-toggle-white"></div>
-                    </a></li>
-            </ul>
-            <!-- BEGIN LOGO -->
-            <a href="index.html"><img src="/webarch/webarch/HTML/assets/img/logo.png" class="logo" alt=""
-                                      data-src="/webarch/webarch/HTML/assets/img/logo.png"
-                                      data-src-retina="/webarch/webarch/HTML/assets/img/logo2x.png" width="106"
-                                      height="21"/></a>
-            <!-- END LOGO -->
-            <ul class="nav pull-right notifcation-center">
-                <li class="dropdown" id="header_task_bar"><a href="index.html" class="dropdown-toggle active"
-                                                             data-toggle="">
-                        <div class="iconset top-home"></div>
-                    </a></li>
-                <li class="dropdown" id="header_inbox_bar"><a href="email.html" class="dropdown-toggle">
-                        <div class="iconset top-messages"></div>
-                        <span class="badge" id="msgs-badge">2</span> </a></li>
-                <li class="dropdown" id="portrait-chat-toggler" style="display:none"><a href="#sidr"
-                                                                                        class="chat-menu-toggle">
-                        <div class="iconset top-chat-white "></div>
-                    </a></li>
+        
+
+        <div class="navbar-header">
+            <a href=""><img class="img-circle" src="/storage/app/public/images/coltech.jpg" alt="" style="width: 60px; height: 60px; margin-top: 0px; margin-left: 15px;"></a>
+
+            <ul class="nav navbar-nav pull-right visible-xs-block">
+                <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
             </ul>
         </div>
-        <!-- END RESPONSIVE MENU TOGGLER -->
+        <ul class="nav navbar-nav navbar-left" >
+            <h3 style="color:#000000; font-family: sans-serif;">TRƯỜNG ĐẠI HỌC CÔNG NGHỆ </h3>
+        </ul>
+
+
         <div class="header-quick-nav">
-            <!-- BEGIN TOP NAVIGATION MENU -->
-            <div class="pull-left">
-                <ul class="nav quick-section">
-                    <li class="quicklinks"><a href="#" class="" id="layout-condensed-toggle">
-                            <div class="iconset top-menu-toggle-dark"></div>
-                        </a></li>
-                </ul>
-                <ul class="nav quick-section">
-                    <li class="quicklinks"><a href="#" class="">
-                            <div class="iconset top-reload"></div>
-                        </a></li>
-                    <li class="quicklinks"><span class="h-seperate"></span></li>
-                    <li class="quicklinks"><a href="#" class="">
-                            <div class="iconset top-tiles"></div>
-                        </a></li>
-                    <li class="m-r-10 input-prepend inside search-form no-boarder"><span class="add-on"> <span
-                                    class="iconset top-search"></span></span>
-                        <input name="" type="text" class="no-boarder " placeholder="Search Dashboard"
-                               style="width:250px;">
-                    </li>
-                </ul>
-            </div>
-            <!-- END TOP NAVIGATION MENU -->
+            
             <!-- BEGIN CHAT TOGGLER -->
             <div class="pull-right">
                 <div class="chat-toggler"><a href="#" class="dropdown-toggle" id="my-task-list" data-placement="bottom"
@@ -132,47 +137,35 @@
                     <div id="notification-list" style="display:none">
                         <div style="width:300px">
                             <div class="notification-messages info">
-                                <div class="user-profile"><img src="/webarch/webarch/HTML/assets/img/profiles/d.jpg"
-                                                               alt=""
-                                                               data-src="/webarch/webarch/HTML/assets/img/profiles/d.jpg"
-                                                               data-src-retina="/webarch/webarch/HTML/assets/img/profiles/d2x.jpg"
-                                                               width="35" height="35"></div>
+                                <div class="user-profile"><img src="storage/app/public/images/tranh.jpg" width="35" height="35"></div>
                                 <div class="message-wrapper">
-                                    <div class="heading"> David Nester - Commented on your wall</div>
-                                    <div class="description"> Meeting postponed to tomorrow</div>
-                                    <div class="date pull-left"> A min ago</div>
+                                    <div class="heading"> Chỉnh sửa danh sách giảng viên</div>
+                                    <div class="description"> Một giảng viên vừa được thêm vào trong danh sách</div>
+                                    <div class="date pull-left"> 1 phút trước</div>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
                             <div class="notification-messages danger">
                                 <div class="iconholder"><i class="icon-warning-sign"></i></div>
                                 <div class="message-wrapper">
-                                    <div class="heading"> Server load limited</div>
-                                    <div class="description"> Database server has reached its daily capicity</div>
-                                    <div class="date pull-left"> 2 mins ago</div>
+                                    <div class="heading">Chỉnh sửa danh sách sinh viên</div>
+                                    <div class="description">Danh sách sinh viên có sự thay đổi</div>
+                                    <div class="date pull-left">5 phút trước</div>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
                             <div class="notification-messages success">
-                                <div class="user-profile"><img src="/webarch/webarch/HTML/assets/img/profiles/h.jpg"
-                                                               alt=""
-                                                               data-src="/webarch/webarch/HTML/assets/img/profiles/h.jpg"
-                                                               data-src-retina="/webarch/webarch/HTML/assets/img/profiles/h2x.jpg"
-                                                               width="35" height="35"></div>
+                                <div class="user-profile"><img src="storage/app/public/images/tranh.jpg" width="35" height="35"></div>
                                 <div class="message-wrapper">
-                                    <div class="heading"> You haveve got 150 messages</div>
-                                    <div class="description"> 150 newly unread messages in your inbox</div>
-                                    <div class="date pull-left"> An hour ago</div>
+                                    <div class="heading">Cập nhật email của giảng viên</div>
+                                    <div class="description">Cập nhật lại sự thay đổi email của giảng viên để quản lý</div>
+                                    <div class="date pull-left">1 giờ trước</div>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="profile-pic"><img src="/webarch/webarch/HTML/assets/img/profiles/avatar_small.jpg"
-                                                  alt=""
-                                                  data-src="/webarch/webarch/HTML/assets/img/profiles/avatar_small.jpg"
-                                                  data-src-retina="/webarch/webarch/HTML/assets/img/profiles/avatar_small2x.jpg"
-                                                  width="35" height="35"/></div>
+                    <div class="profile-pic"><img src="storage/app/public/images/tranh.jpg"  width="35" height="35"/></div>
                 </div>
 
                 <ul class="nav quick-section ">
@@ -182,28 +175,12 @@
                         </a>
                         <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
                             <li><a href="/trang-ca-nhan"> Trang cá nhân</a></li>
-                            <li><a href="email.html"> Tin nhắn&nbsp;&nbsp;<span
-                                            class="badge badge-important animated bounceIn">2</span></a></li>
-                            <li class="divider"></li>
                             <li><a href="/doi-mat-khau"> Đổi mật khẩu</a></li>
                             <li><a href="/logout"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Đăng xuất</a></li>
                         </ul>
                     </li>
-                    <li class="quicklinks"><span class="h-seperate"></span></li>
-                    <li class="quicklinks"><a id="chat-menu-toggle" href="#sidr" class="chat-menu-toggle">
-                            <div class="iconset top-chat-dark "><span class="badge badge-important hide"
-                                                                      id="chat-message-count">1</span></div>
-                        </a>
-                        <div class="simple-chat-popup chat-menu-toggle hide">
-                            <div class="simple-chat-popup-arrow"></div>
-                            <div class="simple-chat-popup-inner">
-                                <div style="width:100px">
-                                    <div class="semi-bold">David Nester</div>
-                                    <div class="message">Hey you there</div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                   
+                    
                 </ul>
             </div>
             <!-- END CHAT TOGGLER -->
@@ -214,37 +191,32 @@
 </div>
 <!-- END HEADER -->
 <!-- BEGIN CONTAINER -->
-<div class="page-container row-fluid">
-    <!-- BEGIN SIDEBAR -->
-    <div class="page-sidebar" id="main-menu">
-        <!-- BEGIN MINI-PROFILE -->
-        <div class="page-sidebar-wrapper scrollbar-dynamic" id="main-menu-wrapper">
-            <div class="user-info-wrapper">
-                <div class="profile-wrapper"><img src="/webarch/webarch/HTML/assets/img/profiles/avatar.jpg" alt=""
-                                                  data-src="/webarch/webarch/HTML/assets/img/profiles/avatar.jpg"
-                                                  data-src-retina="/webarch/webarch/HTML/assets/img/profiles/avatar2x.jpg"
-                                                  width="69" height="69"/></div>
-                <div class="user-info">
-                    <div class="greeting">Chào !</div>
-                    <div class="username">Hoàng Hải</div>
-                    <div class="status">Trạng thái<a href="#">
-                            <div class="status-icon green"></div>
-                            Online</a></div>
-                </div>
-            </div>
-            <!-- END MINI-PROFILE -->
-            <!-- BEGIN SIDEBAR MENU -->
+<div class="page-container row-fluid" >
 
-            <ul>
-                @yield('sidebar')
-            </ul>
 
-            <div class="clearfix"></div>
-            <!-- END SIDEBAR MENU -->
-        </div>
+    <div class="col-sm-3 sidenav" style="margin-top: 60px;">
+        <p>   
+            <li class="active list_"><a href="index.html"> <i class="icon-custom-home"></i> <span class="title">Tổng quan</span></span></a></li>
+        </p>
+      <p>
+            <li class="list_"><a href="javascript:;"> <i class="fa fa-file-text"></i> <span class="title">Quản lý giảng viên</span><span class="arrow "></span> </a>
+                <ul class="sub-menu">
+                    <li class="list_"><a href="/danh-sach-giang-vien"> Danh Sách Giảng Viên </a></li>
+                    <li class="list_"><a href="/them-giang-vien">Thêm Giảng Viên </a></li>
+                </ul>
+            </li>
+      </p>
+      <p>
+          <li class="list_"><a href="javascript:;"> <i class="icon-custom-ui"></i> <span class="title">Quản Lý Sinh Viên</span> <span class="arrow "></span> </a>
+                <ul class="sub-menu list_">
+                    <li class="list_"><a href="/them-sinh-vien"> Danh Sách Sinh Viên </a></li>
+                    <li class="list_"><a href="/them-sinh-vien"> Thêm Sinh Viên </a></li>
+                </ul>
+            </li>
+      </p>
     </div>
 
-    <!-- END SIDEBAR -->
+    
     <!-- BEGIN PAGE CONTAINER-->
     <div class="page-content">
         <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
@@ -255,294 +227,11 @@
           <p>TRANG CHỦ</p>
         </li>
         <li><a href="#" class="active">@yield('name_page')</a> </li>
-      </ul>
+        </ul>
             @yield('main')
         </div>
     </div>
-    <!-- BEGIN CHAT -->
-    <div class="chat-window-wrapper">
-        <div id="main-chat-wrapper" class="inner-content">
-            <div class="chat-window-wrapper scroller scrollbar-dynamic" id="chat-users">
-                <div class="chat-header">
-                    <div class="pull-left">
-                        <input type="text" placeholder="search">
-                    </div>
-                    <div class="pull-right">
-                        <a href="#" class="">
-                            <div class="iconset top-settings-dark "></div>
-                        </a>
-                    </div>
-                </div>
-                <div class="side-widget">
-                    <div class="side-widget-title">group chats</div>
-                    <div class="side-widget-content">
-                        <div id="groups-list">
-                            <ul class="groups">
-                                <li><a href="#">
-                                        <div class="status-icon green"></div>
-                                        Office work</a></li>
-                                <li><a href="#">
-                                        <div class="status-icon green"></div>
-                                        Personal vibes</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="side-widget fadeIn">
-                    <div class="side-widget-title">favourites</div>
-                    <div id="favourites-list">
-                        <div class="side-widget-content">
-                            <div class="user-details-wrapper active" data-chat-status="online"
-                                 data-chat-user-pic="/webarch/webarch/HTML/assets/img/profiles/d.jpg"
-                                 data-chat-user-pic-retina="/webarch/webarch/HTML/assets/img/profiles/d2x.jpg"
-                                 data-user-name="Jane Smith">
-                                <div class="user-profile">
-                                    <img src="/webarch/webarch/HTML/assets/img/profiles/d.jpg" alt=""
-                                         data-src="/webarch/webarch/HTML/assets/img/profiles/d.jpg"
-                                         data-src-retina="/webarch/webarch/HTML/assets/img/profiles/d2x.jpg" width="35"
-                                         height="35">
-                                </div>
-                                <div class="user-details">
-                                    <div class="user-name">
-                                        Jane Smith
-                                    </div>
-                                    <div class="user-more">
-                                        Hello you there?
-                                    </div>
-                                </div>
-                                <div class="user-details-status-wrapper">
-                                    <span class="badge badge-important">3</span>
-                                </div>
-                                <div class="user-details-count-wrapper">
-                                    <div class="status-icon green"></div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="user-details-wrapper" data-chat-status="busy"
-                                 data-chat-user-pic="/webarch/webarch/HTML/assets/img/profiles/d.jpg"
-                                 data-chat-user-pic-retina="/webarch/webarch/HTML/assets/img/profiles/d2x.jpg"
-                                 data-user-name="David Nester">
-                                <div class="user-profile">
-                                    <img src="/webarch/webarch/HTML/assets/img/profiles/c.jpg" alt=""
-                                         data-src="/webarch/webarch/HTML/assets/img/profiles/c.jpg"
-                                         data-src-retina="/webarch/webarch/HTML/assets/img/profiles/c2x.jpg" width="35"
-                                         height="35">
-                                </div>
-                                <div class="user-details">
-                                    <div class="user-name">
-                                        David Nester
-                                    </div>
-                                    <div class="user-more">
-                                        Busy, Do not disturb
-                                    </div>
-                                </div>
-                                <div class="user-details-status-wrapper">
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="user-details-count-wrapper">
-                                    <div class="status-icon red"></div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="side-widget">
-                    <div class="side-widget-title">more friends</div>
-                    <div class="side-widget-content" id="friends-list">
-                        <div class="user-details-wrapper" data-chat-status="online"
-                             data-chat-user-pic="/webarch/webarch/HTML/assets/img/profiles/d.jpg"
-                             data-chat-user-pic-retina="/webarch/webarch/HTML/assets/img/profiles/d2x.jpg"
-                             data-user-name="Jane Smith">
-                            <div class="user-profile">
-                                <img src="/webarch/webarch/HTML/assets/img/profiles/d.jpg" alt=""
-                                     data-src="/webarch/webarch/HTML/assets/img/profiles/d.jpg"
-                                     data-src-retina="/webarch/webarch/HTML/assets/img/profiles/d2x.jpg" width="35"
-                                     height="35">
-                            </div>
-                            <div class="user-details">
-                                <div class="user-name">
-                                    Jane Smith
-                                </div>
-                                <div class="user-more">
-                                    Hello you there?
-                                </div>
-                            </div>
-                            <div class="user-details-status-wrapper">
-
-                            </div>
-                            <div class="user-details-count-wrapper">
-                                <div class="status-icon green"></div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="user-details-wrapper" data-chat-status="busy"
-                             data-chat-user-pic="/webarch/webarch/HTML/assets/img/profiles/d.jpg"
-                             data-chat-user-pic-retina="/webarch/webarch/HTML/assets/img/profiles/d2x.jpg"
-                             data-user-name="David Nester">
-                            <div class="user-profile">
-                                <img src="/webarch/webarch/HTML/assets/img/profiles/h.jpg" alt=""
-                                     data-src="/webarch/webarch/HTML/assets/img/profiles/h.jpg"
-                                     data-src-retina="/webarch/webarch/HTML/assets/img/profiles/h2x.jpg" width="35"
-                                     height="35">
-                            </div>
-                            <div class="user-details">
-                                <div class="user-name">
-                                    David Nester
-                                </div>
-                                <div class="user-more">
-                                    Busy, Do not disturb
-                                </div>
-                            </div>
-                            <div class="user-details-status-wrapper">
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="user-details-count-wrapper">
-                                <div class="status-icon red"></div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="user-details-wrapper" data-chat-status="online"
-                             data-chat-user-pic="/webarch/webarch/HTML/assets/img/profiles/d.jpg"
-                             data-chat-user-pic-retina="/webarch/webarch/HTML/assets/img/profiles/d2x.jpg"
-                             data-user-name="Jane Smith">
-                            <div class="user-profile">
-                                <img src="/webarch/webarch/HTML/assets/img/profiles/c.jpg" alt=""
-                                     data-src="/webarch/webarch/HTML/assets/img/profiles/c.jpg"
-                                     data-src-retina="/webarch/webarch/HTML/assets/img/profiles/c2x.jpg" width="35"
-                                     height="35">
-                            </div>
-                            <div class="user-details">
-                                <div class="user-name">
-                                    Jane Smith
-                                </div>
-                                <div class="user-more">
-                                    Hello you there?
-                                </div>
-                            </div>
-                            <div class="user-details-status-wrapper">
-
-                            </div>
-                            <div class="user-details-count-wrapper">
-                                <div class="status-icon green"></div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="user-details-wrapper" data-chat-status="busy"
-                             data-chat-user-pic="/webarch/webarch/HTML/assets/img/profiles/d.jpg"
-                             data-chat-user-pic-retina="/webarch/webarch/HTML/assets/img/profiles/d2x.jpg"
-                             data-user-name="David Nester">
-                            <div class="user-profile">
-                                <img src="/webarch/webarch/HTML/assets/img/profiles/h.jpg" alt=""
-                                     data-src="/webarch/webarch/HTML/assets/img/profiles/h.jpg"
-                                     data-src-retina="/webarch/webarch/HTML/assets/img/profiles/h2x.jpg" width="35"
-                                     height="35">
-                            </div>
-                            <div class="user-details">
-                                <div class="user-name">
-                                    David Nester
-                                </div>
-                                <div class="user-more">
-                                    Busy, Do not disturb
-                                </div>
-                            </div>
-                            <div class="user-details-status-wrapper">
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="user-details-count-wrapper">
-                                <div class="status-icon red"></div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="chat-window-wrapper" id="messages-wrapper" style="display:none">
-                <div class="chat-header">
-                    <div class="pull-left">
-                        <input type="text" placeholder="search">
-                    </div>
-                    <div class="pull-right">
-                        <a href="#" class="">
-                            <div class="iconset top-settings-dark "></div>
-                        </a>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-                <div class="chat-messages-header">
-                    <div class="status online"></div>
-                    <span class="semi-bold">Jane Smith(Typing..)</span>
-                    <a href="#" class="chat-back"><i class="icon-custom-cross"></i></a>
-                </div>
-                <div class="chat-messages scrollbar-dynamic clearfix">
-                    <div class="inner-scroll-content clearfix">
-                        <div class="sent_time">Yesterday 11:25pm</div>
-                        <div class="user-details-wrapper ">
-                            <div class="user-profile">
-                                <img src="/webarch/webarch/HTML/assets/img/profiles/d.jpg" alt=""
-                                     data-src="/webarch/webarch/HTML/assets/img/profiles/d.jpg"
-                                     data-src-retina="/webarch/webarch/HTML/assets/img/profiles/d2x.jpg" width="35"
-                                     height="35">
-                            </div>
-                            <div class="user-details">
-                                <div class="bubble">
-                                    Hello, You there?
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="sent_time off">Yesterday 11:25pm</div>
-                        </div>
-                        <div class="user-details-wrapper ">
-                            <div class="user-profile">
-                                <img src="/webarch/webarch/HTML/assets/img/profiles/d.jpg" alt=""
-                                     data-src="/webarch/webarch/HTML/assets/img/profiles/d.jpg"
-                                     data-src-retina="/webarch/webarch/HTML/assets/img/profiles/d2x.jpg" width="35"
-                                     height="35">
-                            </div>
-                            <div class="user-details">
-                                <div class="bubble">
-                                    How was the meeting?
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="sent_time off">Yesterday 11:25pm</div>
-                        </div>
-                        <div class="user-details-wrapper ">
-                            <div class="user-profile">
-                                <img src="/webarch/webarch/HTML/assets/img/profiles/d.jpg" alt=""
-                                     data-src="/webarch/webarch/HTML/assets/img/profiles/d.jpg"
-                                     data-src-retina="/webarch/webarch/HTML/assets/img/profiles/d2x.jpg" width="35"
-                                     height="35">
-                            </div>
-                            <div class="user-details">
-                                <div class="bubble">
-                                    Let me know when you free
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="sent_time off">Yesterday 11:25pm</div>
-                        </div>
-                        <div class="sent_time ">Today 11:25pm</div>
-                        <div class="user-details-wrapper pull-right">
-                            <div class="user-details">
-                                <div class="bubble sender">
-                                    Let me know when you free
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="sent_time off">Sent On Tue, 2:45pm</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="chat-input-wrapper" style="display:none">
-                    <textarea id="chat-message-input" rows="1" placeholder="Type your message"></textarea>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>
-    <!-- END CHAT -->
+    
 </div>
 
 <!-- END CONTAINER -->

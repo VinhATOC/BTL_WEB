@@ -34,19 +34,19 @@ $(document).ready(function() {
 		$("#password_null").remove();
 		$("#captcha_null").text('');
 		if(username.val() == ''){
-			username.before('<p id="username_null" class="text-error">Chưa nhập tài khoản !</p>');
+			username.before('<p id="username_null" class="text-error">Please enter your account !</p>');
 			check = false;
 		}
 		if(password.val() == ''){
-			password.before('<p id="password_null" class="text-error">Chưa nhập mật khẩu !</p>');
+			password.before('<p id="password_null" class="text-error">Please enter your password !</p>');
 			check = false;
 		}
 		if($("#email").length != 0 && $("#email").val() == ''){
-			$("#email").before('<p id="email_null" class="text-error">Chưa nhập email !</p>');
+			$("#email").before('<p id="email_null" class="text-error">Please enter your email !</p>');
 			check = false;
 		}
 		if(text_captcha && text_captcha.val() == ''){
-			$("#captcha_null").text('Chưa nhập mã bảo vệ !');
+			$("#captcha_null").text('Please enter text_captcha !');
 			check = false;
 		}
 		if(!check){

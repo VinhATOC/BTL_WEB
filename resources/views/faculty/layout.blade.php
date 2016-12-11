@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('sidebar')
-	<li class="active"><a href="index.html"> <i class="icon-custom-home"></i> <span
+	           <li class="active"><a href="index.html"> <i class="icon-custom-home"></i> <span
                                 class="title">Tổng quan</span></span> </a>
 
                 </li>
